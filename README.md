@@ -1,1 +1,1 @@
-<center><a href='shafou.com'>Clik here</a></center>
+<center><a href='http://shafou.com'>Clik here</a></center>
