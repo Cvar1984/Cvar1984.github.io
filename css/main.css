@@ -1,0 +1,62 @@
+:root {
+    --pink:#D2738A;
+}
+
+.modal-body {
+    background: url(../images/bg.jpg) no-repeat fixed;
+    background-position: right 25% center;
+    background-size: cover;
+}
+
+a:link, a:visited, a:hover, a:active{
+    color: var(--pink);
+}
+
+::-moz-selection { /* gecko */
+    background: var(--pink);
+    color: black;
+}
+
+.modal-header {
+    font-family: monospace;
+    font-weight: lighter;
+    font-size: 14pt;
+    color: rgb(150, 150, 150);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+.modal-footer {
+    font-family: monospace;
+    font-weight: lighter;
+    font-size: 14pt;
+    color: rgb(193, 180, 146);
+    position: fixed;
+    top: 80%;
+    left: 48%;
+    transform: translate(-50%, 0);
+}
+/*other class*/
+
+.blink {
+    animation:blinkingText 1s infinite;
+}
+
+@keyframes blinkingText {
+    0% {
+        color: var(--white);
+    }
+    49% {
+        color: var(--transparent);
+    }
+    50% {
+        color: transparent;
+    }
+    99% {
+        color: transparent;
+    }
+    100%{
+        color: var(--white);
+    }
+}
