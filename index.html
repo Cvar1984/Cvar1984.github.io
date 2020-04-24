@@ -23,9 +23,24 @@
     <link rel="stylesheet" media="screen" href="css/style.css" />
     <link href="css/main.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
-    <audio controls preload="auto" autoplay loop style="display: none;">
-      <source src="audio/bgm.mp3" type="audio/mpeg" />
-    </audio>
+    <script>
+      window.addEventListener("load", function () {
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var source = audioCtx.createBufferSource();
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "audio/bgm.mp3");
+        xhr.responseType = "arraybuffer";
+        xhr.addEventListener("load", function (r) {
+          audioCtx.decodeAudioData(xhr.response, function (buffer) {
+            source.buffer = buffer;
+            source.connect(audioCtx.destination);
+            source.loop = false;
+          });
+          source.start(0);
+        });
+        xhr.send();
+      });
+    </script>
   </head>
   <body class="modal-body">
     <!-- particles.js container -->
