@@ -10,12 +10,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>particles.js</title>
-    <meta
-      name="description"
-      content="particles.js is a lightweight JavaScript library for creating particles."
-    />
-    <meta name="author" content="Vincent Garreau" />
+    <title>???</title>
+    <meta name="author" content="Cvar1984" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -23,24 +19,6 @@
     <link rel="stylesheet" media="screen" href="css/style.css" />
     <link href="css/main.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
-    <script>
-      window.addEventListener("load", function () {
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var source = audioCtx.createBufferSource();
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "audio/bgm.mp3");
-        xhr.responseType = "arraybuffer";
-        xhr.addEventListener("load", function (r) {
-          audioCtx.decodeAudioData(xhr.response, function (buffer) {
-            source.buffer = buffer;
-            source.connect(audioCtx.destination);
-            source.loop = false;
-          });
-          source.start(0);
-        });
-        xhr.send();
-      });
-    </script>
   </head>
   <body class="modal-body">
     <!-- particles.js container -->
@@ -189,9 +167,14 @@
       ><font color="CornflowerBlue">:~</font><font color="white">$&nbsp;</font
       ><font class="blink">&block;</font>
     </div>
+    <audio controls autoplay loop style="display: none;" id="bgAudio">
+      <source src="audio/bgm.mp3" type="audio/mpeg" />
+    </audio>
+    <img src="images/navi.png" onclick="audio.play()" id="navi" />
     <div class="modal-footer">
       <p><span id="typed"></span></p>
       <script type="text/javascript">
+        var audio = document.getElementById('bgAudio');
         var typed = new Typed("#typed", {
           strings: ["No matter where you are, everyone is connected"],
           typeSpeed: 70,
