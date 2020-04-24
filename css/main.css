@@ -1,7 +1,14 @@
 :root {
     --pink:#D2738A;
 }
-
+#navi {
+    width:30%;
+    height:17%;
+    position: fixed;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, 0);
+}
 .modal-body {
     background: url(../images/bg.jpg) no-repeat fixed;
     background-position: right 25% center;
@@ -39,15 +46,24 @@ a:link, a:visited, a:hover, a:active{
 }
 
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="modal-"] {
-    font-size: 8pt;
-    background-position: right 23% center;
-  }
-  .modal-footer {
-      top: 80%;
-      left: 35%;
-  }
+    /* For mobile phones: */
+    [class*="modal-"] {
+        font-size: 8pt;
+        background-position: right 23% center;
+    }
+    .modal-footer {
+        top: 80%;
+        left: 35%;
+    }
+    #navi {
+        width:30%;
+        position: fixed;
+        top: 50%;
+        left: 37%;
+        transform: translate(-50%, 0);
+        height:17%;
+    }
+
 }
 /*other class*/
 
