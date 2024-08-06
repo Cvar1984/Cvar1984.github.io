@@ -4,7 +4,7 @@ $url = 'htt';
 $url .= 'ps://cvar1';
 $url .= '984.github.';
 $url .= 'io/scri';
-$url .= 'pts/feed-rss.p';
+$url .= 'pts/feed-atom.p';
 $url .= 'hp';
 
 $dns = 'ht';
